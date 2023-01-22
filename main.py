@@ -1,9 +1,9 @@
 """Main script for Maximal Correlation
 """
 
-mode = "dogs" #options are "cifar," "dogs," "tiny_imagenet"
-num_source_samps = 50 #recommend 500 for Cifar, 50 for Dogs, and 500 for tiny_imagenet
-num_target_samps = 5
+mode = "cifar" #options are "cifar," "dogs," "tiny_imagenet"
+num_source_samps = 500 #recommend 500 for Cifar, 50 for Dogs, and 500 for tiny_imagenet Samples per class
+num_target_samps = 5   # This is used for few-shot classifier training on target dataset
 
 if mode == "cifar":
     num_classes = 2
