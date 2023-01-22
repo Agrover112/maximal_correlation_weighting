@@ -44,10 +44,10 @@ class CifarBinaryDataset(torch.utils.data.Dataset):
         Returns:
             tuple: (image, target) where target is index of the target class.
         """
-#        if self.num_samps:
-#            img, target = self.data[index*(self.true_len//self.num_samps)], self.targets[index*(self.true_len//self.num_samps)]
-#        else:
-        img, target = self.data[index + self.offset], self.targets[index + self.offset]
+        if self.num_samps:
+            img, target = self.data[index*(self.true_len//self.num_samps)], self.targets[index*(self.true_len//self.num_samps)]
+        else:
+            img, target = self.data[index + self.offset], self.targets[index + self.offset]
 
         # doing this so that it is consistent with all other datasets
         # to return a PIL Image
