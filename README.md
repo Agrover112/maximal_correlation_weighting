@@ -9,3 +9,5 @@ nets.py contains the LeNet architecture used for the experiments
 datasets.py contains the dataloaders for the datasets
 
 main.py contains the main code for the MCW method. To use, change "mode" on line 4 to the appropriate dataset, and change the number of source samples in line 5 as needed.
+
+PS: Move datasets and save_models outside/ this folder onto the main path
