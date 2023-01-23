@@ -196,6 +196,7 @@ if __name__ == '__main__':
                 inputs, labels = data
                 sigma[i,:], g[:,:,i] = compute_max_corr(all_nets[i][0],inputs,labels,num_classes)
                 #print(" Sigma {} for Task {}".format(str(sigma[i,:].shape),str(i)))
+                print(sigma.shape)
                 #print(" G {} for Task {}".format(str(g[:,:,i].shape),str(i)))
                 avg_sigma.append(sigma[i,:].mean().item())
                 running_probs_train += weighted_network_output(all_nets[i][0],sigma[i,:],g[:,:,i],inputs)
